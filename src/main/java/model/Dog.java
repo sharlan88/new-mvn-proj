@@ -1,2 +1,12 @@
-package model;public class Dog {
+package model;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Dog {
+
+    private String name;
 }
