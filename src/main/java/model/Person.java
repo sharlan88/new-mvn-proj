@@ -12,7 +12,7 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person {
+public class Person implements Cloneable {
 
     private int id;
     private String name;
@@ -27,15 +27,6 @@ public class Person {
         this.age = age;
     }
 
-    //    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Person person = (Person) o;
-//        return this.id == person.id;
-//    }
-
-
     @Override
     public boolean equals(Object o) {
          if (this == o) return true;
@@ -49,5 +40,17 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, lName, age, cat);
+    }
+
+
+    @Override
+    public Person clone()  {
+        Person clone = null;
+        try {
+            clone = (Person) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+        return clone;
     }
 }
