@@ -26,7 +26,7 @@ public class ClonePersonTest {
 
         System.out.println("Clone correct ? " + p3.equals(p4));
 
-        Person p5copy = new Person(p3.getId(), p3.getName(), p3.getLName(), p3.getAge(), p3.getCat());
+        Person p5copy = new Person(p3.getId(), p3.getName(), p3.getLName(), p3.getAge(), p3.getCat(), null);
         System.out.println("Clone correct ? " + p4.equals(p5copy));
         System.out.println("Clone correct ? " + p3.equals(p5copy));
 
